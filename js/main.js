@@ -84,16 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
         eventsGrid.appendChild(eventCard);
     });
-
-    // Contact form handling
-    const contactForm = document.querySelector('.contact-form');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        // Add form submission logic here
-        alert('Thank you for your message. We will get back to you soon!');
-        contactForm.reset();
-    });
-
     // Helper function to format dates
     function formatDate(dateString) {
         return new Date(dateString).toLocaleDateString('en-US', {

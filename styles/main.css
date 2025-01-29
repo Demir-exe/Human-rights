@@ -294,6 +294,7 @@ h1, h2, h3 {
     padding: 0.8rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+    resize: none;
 }
 
 .contact-form textarea {
@@ -487,7 +488,8 @@ footer {
 .footer-section a {
     color: white;
     text-decoration: none;
-    display: block;
+    display: flex;
+    gap: 1rem;
     margin-bottom: 0.5rem;
 }
 

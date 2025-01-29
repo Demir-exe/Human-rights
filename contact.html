@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Rights Awareness</title>
+    <link rel="icon" type="image/png" href="assets/images/psychology.png" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets/images/psychology.png"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto+Slab:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/images/psychology.png" alt="Human Rights Logo" />
+          <h1>Human Rights</h1>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" data-translate="home">Ana Sayfa</a>
+          <a href="rights.html" data-translate="rights">Haklar</a>
+          <a href="#about" data-translate="about">Hakkımızda</a>
+          <a href="#articles" data-translate="articles">Makaleler</a>
+          <a href="#events" data-translate="events">Etkinlikler</a>
+          <a href="#get-involved" data-translate="getInvolved">Katılın</a>
+          <a href="#contact" data-translate="contact">İletişim</a>
+        </div>
+        <div class="nav-actions">
+          <button class="language-selector">
+            EN <i class="fas fa-globe"></i>
+          </button>
+          <button class="search-toggle"><i class="fas fa-search"></i></button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+        <section id="contact" class="contact-section">
+            <h2 data-translate="contactTitle">Contact Us</h2>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <input
+                            type="text"
+                            data-translate="namePlaceholder"
+                            placeholder="Your Name"
+                            required
+                    />
+                    <input
+                            type="email"
+                            data-translate="emailPlaceholder"
+                            placeholder="Your Email"
+                            required
+                    />
+                    <textarea
+                            data-translate="messagePlaceholder"
+                            placeholder="Your Message"
+                            required
+                    ></textarea>
+                    <button
+                            type="submit"
+                            class="submit-button"
+                            data-translate="sendMessage"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Human Rights Watch</h3>
+          <p>Promoting and protecting human rights worldwide</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#">contact@humanrights.org<i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Human Rights Watch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+  </body>
+</html>
