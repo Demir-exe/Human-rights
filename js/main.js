@@ -1,16 +1,16 @@
-// Wait for DOM to load
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Get slider elements
+    
     const slides = document.querySelectorAll('.slide');
     const progressBars = document.querySelectorAll('.progress-bar');
     const heroSection = document.querySelector('.hero-section');
 
-    // Initialize variables
+    
     let currentSlide = 0;
     let slideInterval = null;
     const slideDelay = 5000;
 
-    // Function to show a specific slide
+   
     function showSlide(index) {
         // Remove active class from all slides and progress bars
         slides.forEach(slide => slide.classList.remove('active'));
@@ -114,23 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Sample articles data
-    const articles = [
-        {
-            title: 'Understanding Universal Human Rights',
-            excerpt: 'An introduction to the fundamental human rights that everyone is entitled to...',
-            date: '2025-01-21'
-        },
-        {
-            title: 'The Impact of Education on Human Rights',
-            excerpt: 'Exploring how education plays a crucial role in advancing human rights...',
-            date: '2025-01-20'
-        },
-        {
-            title: 'Global Efforts for Gender Equality',
-            excerpt: 'Examining worldwide initiatives promoting gender equality and women\'s rights...',
-            date: '2025-01-19'
-        }
-    ];
+    const articles = [];
 
     // Populate articles section
     const articlesGrid = document.querySelector('.articles-grid');
@@ -185,6 +169,51 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Thank you for your message. We will get back to you soon!');
         contactForm.reset();
     });
+
+    // Bağış formu işlemleri
+    const donationForm = document.querySelector('.donation-form');
+    if (donationForm) {
+        const amountButtons = document.querySelectorAll('.amount-btn');
+        const amountInput = document.querySelector('#amount');
+
+        // Miktar butonları işlemleri
+        amountButtons.forEach(button => {
+            button.onclick = function() {
+                const amount = this.dataset.amount;
+                console.log('Button clicked, amount:', amount); // Debug için
+                if (amountInput) {
+                    amountInput.value = amount;
+                    console.log('Input value set to:', amount); // Debug için
+                }
+            };
+        });
+
+        // IBAN formatı için input mask
+        const ibanInput = document.querySelector('#iban');
+        if (ibanInput) {
+            ibanInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/[^\dA-Z]/g, '');
+                if (value.length > 2 && !value.startsWith('TR')) {
+                    value = 'TR' + value;
+                }
+                let formatted = '';
+                for (let i = 0; i < value.length; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formatted += ' ';
+                    }
+                    formatted += value[i];
+                }
+                e.target.value = formatted.slice(0, 31);
+            });
+        }
+
+        // Form gönderme işlemi
+        donationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Bağışınız için teşekkür ederiz! İşleminiz alınmıştır.');
+            donationForm.reset();
+        });
+    }
 
     // Helper function to format dates
     function formatDate(dateString) {

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Human Rights Awareness</title>
+    <title>İnsan Hakları</title>
     <link rel="icon" type="image/png" href="assets/images/psychology.png">
     <link rel="shortcut icon" type="image/png" href="assets/images/psychology.png">
     <link rel="stylesheet" href="styles/main.css">
@@ -16,7 +16,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="assets/images/psychology.png" alt="Human Rights Logo">
+                <img src="assets/images/psychology.png" alt="İnsan Hakları Logo">
                 <h1>Human Rights</h1>
             </div>
             <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -136,9 +136,9 @@
         </section>
 
         <section id="about" class="about-section">
-            <h2 data-translate="aboutTitle">About Us</h2>
+            <h2 data-translate="aboutTitle">Hakkımızda</h2>
             <div class="about-content">
-                <p data-translate="aboutText">We are dedicated to promoting and protecting human rights worldwide through education, advocacy, and action.</p>
+                <p data-translate="aboutText">Dünya çapında eğitim, savunuculuk ve eylem yoluyla insan haklarını korumak ve geliştirmek için çalışıyoruz.</p>
                 <div class="values-grid">
                     <div class="value-card">
                         <i class="fas fa-dove"></i>
@@ -160,39 +160,85 @@
         </section>
 
         <section id="articles" class="articles-section">
-            <h2 data-translate="articlesTitle">Latest Articles</h2>
+            <h2 data-translate="articlesTitle">Son Makaleler</h2>
             <div class="articles-grid">
-                <!-- Article cards will be dynamically populated -->
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3>Kadın Hakları</h3>
+                        <p>Toplumda kadınların eşit haklara sahip olması ve güçlendirilmesi için atılması gereken adımlar ve mevcut durum analizi.</p>
+                        <div class="article-meta">
+                            <span class="date">15 Mart 2024</span>
+                            <a href="http://www.isiktac.av.tr/Makaleler/Kad%C4%B1n%20Haklar%C4%B1.pdf" target="_blank"><button class="secondary-button">Devamını Oku</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3>Çocuk Hakları</h3>
+                        <p>Çocukların güvenli bir ortamda büyüme, eğitim alma ve sağlıklı gelişim haklarının korunması için yapılması gerekenler.</p>
+                        <div class="article-meta">
+                            <span class="date">12 Mart 2024</span>
+                            <a href="https://www.tihek.gov.tr/public/editor/uploads/1652181189.pdf" target="_blank"><button class="secondary-button">Devamını Oku</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3>Eğitim Hakları</h3>
+                        <p>Herkesin kaliteli eğitime eşit erişimi için eğitim hakkının önemi ve bu konuda atılması gereken adımlar.</p>
+                        <div class="article-meta">
+                            <span class="date">10 Mart 2024</span>
+                            <a href="https://www.egitimreformugirisimi.org/wp-content/uploads/2017/03/Egitim-Hakk%C4%B1-ve-E%C4%9Fitimde-Haklar.pdf" target="_blank"><button class="secondary-button">Devamını Oku</button></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <div class="article-content">
+                        <h3>Sağlık Hakkı</h3>
+                        <p>Temel bir insan hakkı olan sağlık hizmetlerine erişim ve kaliteli sağlık hizmetlerinin önemi üzerine değerlendirmeler.</p>
+                        <div class="article-meta">
+                            <span class="date">8 Mart 2024</span>
+                            <a href="https://www.saglikhakki.net/post/saglikhakki" target="_blank"><button class="secondary-button">Devamını Oku</button></a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
         <section id="events" class="events-section">
-            <h2 data-translate="eventsTitle">Upcoming Events</h2>
+            <h2 data-translate="eventsTitle">Yaklaşan Etkinlikler</h2>
             <div class="events-grid">
-                <!-- Event cards will be dynamically populated -->
+               
             </div>
         </section>
 
         <section id="get-involved" class="get-involved-section">
-            <h2 data-translate="getInvolvedTitle">Get Involved</h2>
+            <h2 data-translate="getInvolvedTitle">Katılın</h2>
             <div class="involvement-options">
                 <div class="option-card">
                     <i class="fas fa-hand-holding-heart"></i>
-                    <h3 data-translate="volunteer">Volunteer</h3>
-                    <p data-translate="volunteerText">Join our community of volunteers</p>
-                    <button class="secondary-button" data-translate="learnMore">Learn More</button>
+                    <h3 data-translate="volunteer">Gönüllü Olun</h3>
+                    <p data-translate="volunteerText">Gönüllü topluluğumuza katılın</p>
+                    <a href="pages/contact.html">
+                        <button class="secondary-button" data-translate="learnMore">Daha Fazla Bilgi</button>
+                    </a>
                 </div>
                 <div class="option-card">
                     <i class="fas fa-donate"></i>
-                    <h3 data-translate="donate">Donate</h3>
-                    <p data-translate="donateText">Support our mission</p>
-                    <button class="secondary-button" data-translate="donateNow">Donate Now</button>
+                    <h3 data-translate="donate">Bağış Yap</h3>
+                    <p data-translate="donateText">Bağışlarınızla destek olun</p>
+                    <a href="pages/bagis.html">
+                        <button class="secondary-button" data-translate="learnMore">Daha Fazla Bilgi</button>
+                    </a>
                 </div>
                 <div class="option-card">
                     <i class="fas fa-pen-fancy"></i>
-                    <h3 data-translate="petitions">Sign Petitions</h3>
-                    <p data-translate="petitionsText">Make your voice heard</p>
-                    <button class="secondary-button" data-translate="viewPetitions">View Petitions</button>
+                    <h3 data-translate="petitions">İmza Kampanyalarına Katılın</h3>
+                    <p data-translate="petitionsText">Sesinizi duyurun</p>
+                    <button class="secondary-button" data-translate="viewPetitions">İmza Kampanyalarını Görüntüleyin</button>
                 </div>
             </div>
         </section>
@@ -234,32 +280,14 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3 data-translate="quickLinks">Quick Links</h3>
-                <ul>
-                    <li><a href="#about" data-translate="about">About Us</a></li>
-                    <li><a href="#articles" data-translate="articles">Articles</a></li>
-                    <li><a href="#events" data-translate="events">Events</a></li>
-                    <li><a href="#get-involved" data-translate="getInvolved">Get Involved</a></li>
-                </ul>
+            <div class="footer-brand">Human Rights</div>
+            <img src="assets/images/psychology.png" alt="Human Rights Logo" class="footer-logo">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <div class="footer-section">
-                <h3 data-translate="followUs">Follow Us</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3 data-translate="contact">Contact</h3>
-                <p>Email: info@humanrights.org</p>
-                <p>Phone: +1 234 567 8900</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Human Rights Awareness. All rights reserved.</p>
         </div>
     </footer>
 

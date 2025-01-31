@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bağış | Human Rights</title>
+    <link rel="icon" type="image/png" href="../assets/images/psychology.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/psychology.png">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../assets/images/psychology.png" alt="Human Rights Logo">
+                <h1>Human Rights</h1>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-container">
+                <div class="nav-links">
+                    <a href="../index.html" data-translate="home">Ana Sayfa</a>
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-translate="rights">Haklar</a>
+                        <div class="dropdown-menu">
+                            <a href="women-rights.html" data-translate="women">Kadın Hakları</a>
+                            <a href="children-rights.html" data-translate="children">Çocuk Hakları</a>
+                            <a href="equality-rights.html" data-translate="equality">Eşitlik</a>
+                            <a href="education-rights.html" data-translate="education">Eğitim</a>
+                            <a href="housing-rights.html" data-translate="housing">Barınma</a>
+                            <a href="health-rights.html" data-translate="health">Sağlık</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" data-translate="contact">İletişim</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-toggle"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form-section">
+            <div class="form-container">
+                <h2>Bağış Yap</h2>
+                <p class="form-description">İnsan haklarını korumak ve geliştirmek için yapacağınız her bağış değerlidir.</p>
+                
+                <div id="success-message-container"></div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ad</label>
+                        <input type="text" id="name" name="name" required placeholder="Adınız">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="surname">Soyad</label>
+                        <input type="text" id="surname" name="surname" required placeholder="Soyadınız">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="iban">IBAN Numarası</label>
+                        <input type="text" id="iban" name="iban" required placeholder="TR__ ____ ____ ____ ____ ____ __">
+                        <span class="error-message" id="iban-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Bağış Miktarı (₺)</label>
+                        <div class="amount-buttons">
+                            <button type="button" class="amount-btn" data-amount="50">50₺</button>
+                            <button type="button" class="amount-btn" data-amount="100">100₺</button>
+                            <button type="button" class="amount-btn" data-amount="200">200₺</button>
+                            <button type="button" class="amount-btn" data-amount="500">500₺</button>
+                        </div>
+                        <input type="number" id="amount" name="amount" required placeholder="Miktar giriniz" min="1">
+                        <span class="error-message" id="amount-error"></span>
+                    </div>
+
+                    <button type="submit" class="submit-button">Bağış Yap</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">Human Rights</div>
+            <img src="../assets/images/psychology.png" alt="Human Rights Logo" class="footer-logo">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            const amountButtons = document.querySelectorAll('.amount-btn');
+            const amountInput = document.querySelector('#amount');
+            const ibanInput = document.querySelector('#iban');
+            const ibanError = document.querySelector('#iban-error');
+            const amountError = document.querySelector('#amount-error');
+            const nameInput = document.querySelector('#name');
+            const surnameInput = document.querySelector('#surname');
+
+            // Miktar butonları işlevselliği
+            amountButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const amount = this.getAttribute('data-amount');
+                    amountInput.value = amount;
+                    amountError.textContent = '';
+                });
+            });
+
+            // IBAN formatı ve doğrulama
+            ibanInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/[^\dA-Z]/g, '');
+                if (value.length > 2 && !value.startsWith('TR')) {
+                    value = 'TR' + value;
+                }
+                let formatted = '';
+                for (let i = 0; i < value.length && i < 26; i++) {
+                    if (i > 0 && i % 4 === 0) {
+                        formatted += ' ';
+                    }
+                    formatted += value[i];
+                }
+                e.target.value = formatted;
+                ibanError.textContent = '';
+            });
+
+            // Form gönderme işlemi
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                let hasError = false;
+
+                // IBAN kontrolü
+                const ibanValue = ibanInput.value.replace(/\s/g, '');
+                if (ibanValue.length !== 26) {
+                    ibanError.textContent = 'IBAN eksik veya hatalı girildi. TR ile başlayan 26 karakter olmalıdır.';
+                    ibanError.style.color = 'red';
+                    hasError = true;
+                } else if (!ibanValue.startsWith('TR')) {
+                    ibanError.textContent = 'IBAN "TR" ile başlamalıdır';
+                    ibanError.style.color = 'red';
+                    hasError = true;
+                } else {
+                    ibanError.textContent = '';
+                }
+
+                // Miktar kontrolü
+                if (!amountInput.value || amountInput.value < 1) {
+                    amountError.textContent = 'Lütfen geçerli bir miktar giriniz';
+                    amountError.style.color = 'red';
+                    hasError = true;
+                }
+
+                if (!hasError) {
+                    // Onay mesajı göster
+                    const message = `Bağış bilgilerinizi onaylıyor musunuz?
+
+Ad: ${nameInput.value}
+Soyad: ${surnameInput.value}
+IBAN: ${ibanInput.value}
+Miktar: ${amountInput.value}₺`;
+
+                    if (confirm(message)) {
+                        alert('Bağışınız için teşekkür ederiz! İşleminiz alınmıştır.');
+                        form.reset();
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çocuk Hakları - Human Rights Awareness</title>
+    <title>Çocuk Hakları | Human Rights</title>
     <link rel="icon" type="image/png" href="../assets/images/psychology.png">
     <link rel="shortcut icon" type="image/png" href="../assets/images/psychology.png">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -43,49 +44,44 @@
         </nav>
     </header>
 
-    <main class="children-rights-page">
-        <!-- Çocuk Hakları Nedir Bölümü -->
-        <section class="what-is-children-rights">
-            <div class="content-wrapper">
-                <div class="image-side">
+    <main>
+        <section id="intro" class="women-rights-intro">
+            <div class="intro-content">
+                <div class="intro-image">
                     <img src="../assets/images/cocukHaklarıNedir.png" alt="Çocuk Hakları">
                 </div>
-                <div class="text-side">
+                <div class="intro-text">
                     <h2>Çocuk Hakları Nedir?</h2>
-                    <p>Çocuk hakları, tüm çocukların doğuştan sahip olduğu; eğitim, sağlık, barınma, fiziksel, psikolojik veya cinsel sömürüye karşı korunma gibi haklarının hepsini birden tanımlamak için kullanılan evrensel bir kavramdır.</p>
-                    <p>Bu haklar, çocukların bedensel, zihinsel, duygusal, sosyal ve ahlaki bakımlardan özgürlük ve saygınlık içinde, sağlıklı ve normal biçimde gelişebilmesi için hukuk kuralları ile korunan yararlarıdır.</p>
+                    <p>Çocuk hakları, tüm çocukların doğuştan sahip olduğu; eğitim, sağlık, barınma, fiziksel, psikolojik veya cinsel sömürüye karşı korunma gibi haklarının hepsini birden tanımlamak için kullanılan evrensel bir kavramdır. Bu haklar, çocukların bedensel, zihinsel, duygusal, sosyal ve ahlaki bakımlardan özgürlük ve saygınlık içinde, sağlıklı ve normal biçimde gelişebilmesi için hukuk kuralları ile korunan yararlarıdır.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Temel Kategoriler -->
-        <section class="fundamental-rights">
+        <section id="categories" class="fundamental-rights">
             <h2>Çocuk Haklarının Temel Kategorileri</h2>
-            <div class="rights-categories">
-                <div class="right-category">
+            <div class="rights-cards">
+                <div class="right-card">
                     <h3><i class="fas fa-heartbeat"></i> Yaşama Hakkı</h3>
                     <p>Çocuğun yaşama ve sağlıklı gelişim için gerekli temel ihtiyaçlarının karşılanmasını içerir. Yeterli yaşam standardı, sağlık hizmetleri ve sosyal güvenlik bu kapsamdadır.</p>
                 </div>
-                <div class="right-category">
+                <div class="right-card">
                     <h3><i class="fas fa-shield-alt"></i> Korunma Hakkı</h3>
                     <p>Her türlü ihmal, istismar ve sömürüye karşı korunmayı kapsar. Fiziksel ve duygusal istismar, ayrımcılık ve çocuk işçiliği gibi tehditlerden korunma bu hakkın içindedir.</p>
                 </div>
-                <div class="right-category">
+                <div class="right-card">
                     <h3><i class="fas fa-brain"></i> Gelişim Hakkı</h3>
                     <p>Çocuğun potansiyelini tam olarak gerçekleştirebilmesi için gerekli fırsatlara erişimini içerir. Eğitim, oyun, dinlenme, kültürel faaliyetler bu hakka dahildir.</p>
                 </div>
-                <div class="right-category">
+                <div class="right-card">
                     <h3><i class="fas fa-comments"></i> Katılım Hakkı</h3>
                     <p>Çocukların kendilerini ilgilendiren konularda görüşlerini ifade etme ve karar alma süreçlerine katılma hakkıdır. Düşünce özgürlüğü ve kendini ifade etme bu hakkın temelini oluşturur.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Haklar ve Sorumluluklar -->
-        <section class="rights-and-responsibilities">
+        <section class="responsibilities">
             <h2>Haklar ve Sorumluluklar</h2>
-            <div class="content">
-                <p>Çocuk hakları, sadece hakları değil, aynı zamanda sorumlulukları da içerir. Her hak beraberinde bir sorumluluk getirir. Örneğin:</p>
+            <div class="responsibility-list">
                 <ul>
                     <li>Eğitim hakkı - Düzenli okula gitme ve öğrenme sorumluluğu</li>
                     <li>İfade özgürlüğü - Başkalarının haklarına saygı gösterme sorumluluğu</li>
@@ -95,12 +91,10 @@
             </div>
         </section>
 
-        <!-- Şiddet ve İstismar Bilgilendirme -->
-        <section class="violence-and-abuse">
+        <section class="violence-awareness">
             <h2>Şiddet ve İstismar Hakkında Bilgilendirme</h2>
-            <div class="content">
-                <p>Çocuklara yönelik şiddet ve istismar, toplumumuzun en önemli sorunlarından biridir. Her çocuğun güvenli bir ortamda büyüme hakkı vardır.</p>
-                <div class="warning-signs">
+            <div class="violence-content">
+                <div class="statistics">
                     <h3>İstismar Belirtileri</h3>
                     <ul>
                         <li>Davranış değişiklikleri</li>
@@ -109,13 +103,13 @@
                         <li>Açıklanamayan fiziksel belirtiler</li>
                     </ul>
                 </div>
-                <div class="help-resources">
+                <div class="emergency-contacts">
                     <h3>Yardım Kaynakları</h3>
-                    <p>Şiddet veya istismara uğrayan çocuklar için yardım hatları:</p>
                     <ul>
-                        <li>ALO 183 - Sosyal Destek Hattı</li>
-                        <li>ALO 155 - Polis İmdat</li>
-                        <li>ALO 156 - Jandarma İmdat</li>
+                        <li><strong>ALO 183</strong> - Sosyal Destek Hattı</li>
+                        <li><strong>155</strong> - Polis İmdat</li>
+                        <li><strong>156</strong> - Jandarma İmdat</li>
+                        <li><strong>112</strong> - Acil Çağrı Merkezi</li>
                     </ul>
                 </div>
             </div>
@@ -124,23 +118,15 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>İletişim</h3>
-                <p>Email: info@humanrights.org</p>
-                <p>Telefon: +90 123 456 7890</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
+            <div class="footer-brand">Human Rights</div>
+            <img src="../assets/images/psychology.png" alt="Human Rights Logo" class="footer-logo">
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Human Rights Awareness. Tüm hakları saklıdır.</p>
-        </div>
     </footer>
-
-    <script src="../js/main.js"></script>
 </body>
 </html>
