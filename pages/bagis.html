@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,22 +24,22 @@
             </button>
             <div class="nav-container">
                 <div class="nav-links">
-                    <a href="../index.html" data-translate="home">Ana Sayfa</a>
+                    <a href="../index.html">Ana Sayfa</a>
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-translate="rights">Haklar</a>
+                        <a href="#" class="dropdown-toggle">Haklar</a>
                         <div class="dropdown-menu">
-                            <a href="women-rights.html" data-translate="women">Kadın Hakları</a>
-                            <a href="children-rights.html" data-translate="children">Çocuk Hakları</a>
-                            <a href="equality-rights.html" data-translate="equality">Eşitlik</a>
-                            <a href="education-rights.html" data-translate="education">Eğitim</a>
-                            <a href="housing-rights.html" data-translate="housing">Barınma</a>
-                            <a href="health-rights.html" data-translate="health">Sağlık</a>
+                            <a href="women-rights.html">Kadın Hakları</a>
+                            <a href="children-rights.html">Çocuk Hakları</a>
+                            <a href="equality-rights.html">Eşitlik</a>
+                            <a href="education-rights.html">Eğitim</a>
+                            <a href="housing-rights.html">Barınma</a>
+                            <a href="health-rights.html">Sağlık</a>
                         </div>
                     </div>
-                    <a href="contact.html" data-translate="contact">İletişim</a>
+                    <a href="contact.html">İletişim</a>
                 </div>
                 <div class="nav-actions">
-                    <button class="search-toggle"><i class="fas fa-search"></i></button>
+                    <a href="bagis.html" class="donate-button">Bağış Yap</a>
                 </div>
             </div>
         </nav>
@@ -99,85 +101,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.querySelector('.contact-form');
-            const amountButtons = document.querySelectorAll('.amount-btn');
-            const amountInput = document.querySelector('#amount');
-            const ibanInput = document.querySelector('#iban');
-            const ibanError = document.querySelector('#iban-error');
-            const amountError = document.querySelector('#amount-error');
-            const nameInput = document.querySelector('#name');
-            const surnameInput = document.querySelector('#surname');
-
-            // Miktar butonları işlevselliği
-            amountButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const amount = this.getAttribute('data-amount');
-                    amountInput.value = amount;
-                    amountError.textContent = '';
-                });
-            });
-
-            // IBAN formatı ve doğrulama
-            ibanInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/[^\dA-Z]/g, '');
-                if (value.length > 2 && !value.startsWith('TR')) {
-                    value = 'TR' + value;
-                }
-                let formatted = '';
-                for (let i = 0; i < value.length && i < 26; i++) {
-                    if (i > 0 && i % 4 === 0) {
-                        formatted += ' ';
-                    }
-                    formatted += value[i];
-                }
-                e.target.value = formatted;
-                ibanError.textContent = '';
-            });
-
-            // Form gönderme işlemi
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                let hasError = false;
-
-                // IBAN kontrolü
-                const ibanValue = ibanInput.value.replace(/\s/g, '');
-                if (ibanValue.length !== 26) {
-                    ibanError.textContent = 'IBAN eksik veya hatalı girildi. TR ile başlayan 26 karakter olmalıdır.';
-                    ibanError.style.color = 'red';
-                    hasError = true;
-                } else if (!ibanValue.startsWith('TR')) {
-                    ibanError.textContent = 'IBAN "TR" ile başlamalıdır';
-                    ibanError.style.color = 'red';
-                    hasError = true;
-                } else {
-                    ibanError.textContent = '';
-                }
-
-                // Miktar kontrolü
-                if (!amountInput.value || amountInput.value < 1) {
-                    amountError.textContent = 'Lütfen geçerli bir miktar giriniz';
-                    amountError.style.color = 'red';
-                    hasError = true;
-                }
-
-                if (!hasError) {
-                    // Onay mesajı göster
-                    const message = `Bağış bilgilerinizi onaylıyor musunuz?
-
-Ad: ${nameInput.value}
-Soyad: ${surnameInput.value}
-IBAN: ${ibanInput.value}
-Miktar: ${amountInput.value}₺`;
-
-                    if (confirm(message)) {
-                        alert('Bağışınız için teşekkür ederiz! İşleminiz alınmıştır.');
-                        form.reset();
-                    }
-                }
-            });
-        });
-    </script>
+    <script src="../js/bagis.js"></script>
 </body>
 </html>

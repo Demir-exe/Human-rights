@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <script src="js/navigation.js" defer></script>
     <script src="js/slider.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
@@ -24,26 +25,25 @@
             </button>
             <div class="nav-container">
                 <div class="nav-links">
-                    <a href="index.html" data-translate="home">Ana Sayfa</a>
+                    <a href="index.html">Ana Sayfa</a>
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-translate="rights">Haklar</a>
+                        <a href="#" class="dropdown-toggle">Haklar</a>
                         <div class="dropdown-menu">
-                            <a href="pages/women-rights.html" data-translate="women">Kadın Hakları</a>
-                            <a href="pages/children-rights.html" data-translate="children">Çocuk Hakları</a>
-                            <a href="pages/equality-rights.html" data-translate="equality">Eşitlik</a>
-                            <a href="pages/education-rights.html" data-translate="education">Eğitim</a>
-                            <a href="pages/housing-rights.html" data-translate="housing">Barınma</a>
-                            <a href="pages/health-rights.html" data-translate="health">Sağlık</a>
+                            <a href="pages/women-rights.html">Kadın Hakları</a>
+                            <a href="pages/children-rights.html">Çocuk Hakları</a>
+                            <a href="pages/equality-rights.html">Eşitlik</a>
+                            <a href="pages/education-rights.html">Eğitim</a>
+                            <a href="pages/housing-rights.html">Barınma</a>
+                            <a href="pages/health-rights.html">Sağlık</a>
                         </div>
                     </div>
-                    <a href="#about" data-translate="about">Hakkımızda</a>
-                    <a href="#articles" data-translate="articles">Makaleler</a>
-                    <a href="#events" data-translate="events">Etkinlikler</a>
-                    <a href="#get-involved" data-translate="getInvolved">Katılın</a>
-                    <a href="pages/contact.html" data-translate="contact">İletişim</a>
+                    <a href="#about">Hakkımızda</a>
+                    <a href="#articles">Makaleler</a>
+                    <a href="#events">Etkinlikler</a>
+                    <a href="pages/contact.html">İletişim</a>
+                    <a href="pages/bagis.html" class="donate-button">Bağış Yap</a>
                 </div>
                 <div class="nav-actions">
-                    <button class="search-toggle"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </nav>
@@ -53,29 +53,30 @@
         <section id="hero" class="hero-section">
             <div class="slide active" style="background-image: url('assets/images/background.jpg')">
                 <div class="slide-content">
-                    <h2 class="slide-title" data-translate="heroTitle">Savaşta Kazanan Olmaz!</h2>
-                    <p class="slide-description" data-translate="heroText">Savaş, insanlığın en büyük trajedilerinden biridir. Masum insanların hayatlarını kaybettiği, toplumların parçalandığı ve gelecek nesillerin umutlarının yok edildiği bu yıkımı durdurmak hepimizin sorumluluğudur.</p>
+                    <h2 class="slide-title">Savaşta Kazanan Olmaz!</h2>
+                    <p class="slide-description">Savaş, insanlığın en büyük trajedilerinden biridir. Masum insanların hayatlarını kaybettiği, toplumların parçalandığı ve gelecek nesillerin umutlarının yok edildiği bu yıkımı durdurmak hepimizin sorumluluğudur.</p>
+                    <a href="#about" class="cta-button">Daha Fazla Bilgi</a>
                 </div>
             </div>
             
             <div class="slide" style="background-image: url('assets/images/barınmaHakkı.jpg')">
                 <div class="slide-content">
-                    <h2 class="slide-title" data-translate="housingSlideTitle">Barınma Hakkı Temel İnsan Hakkıdır</h2>
-                    <p class="slide-description" data-translate="housingSlideText">Herkes yeterli barınma hakkına sahiptir. Güvenli ve emniyetli bir yuva, insan onuru, fiziksel ve zihinsel sağlık ve genel yaşam kalitesi için temeldir.</p>
+                    <h2 class="slide-title">Barınma Hakkı Temel İnsan Hakkıdır</h2>
+                    <p class="slide-description">Herkes yeterli barınma hakkına sahiptir. Güvenli ve emniyetli bir yuva, insan onuru, fiziksel ve zihinsel sağlık ve genel yaşam kalitesi için temeldir.</p>
                 </div>
             </div>
             
             <div class="slide" style="background-image: url('assets/images/kadınHakları.jpg')">
                 <div class="slide-content">
-                    <h2 class="slide-title" data-translate="womenSlideTitle">Kadın Hakları İnsan Haklarıdır</h2>
-                    <p class="slide-description" data-translate="womenSlideText">Kadınların eşit haklara sahip olması, toplumun gelişmesi için temel bir gerekliliktir. Cinsiyet eşitliği olmadan gerçek bir demokrasiden ve insan haklarından bahsedemeyiz.</p>
+                    <h2 class="slide-title">Kadın Hakları İnsan Haklarıdır</h2>
+                    <p class="slide-description">Kadınların eşit haklara sahip olması, toplumun gelişmesi için temel bir gerekliliktir. Cinsiyet eşitliği olmadan gerçek bir demokrasiden ve insan haklarından bahsedemeyiz.</p>
                 </div>
             </div>
 
             <div class="slide" style="background-image: url('assets/images/cocukHakları.jpg')">
                 <div class="slide-content">
-                    <h2 class="slide-title" data-translate="childrenSlideTitle">Çocuklar Geleceğimizdir</h2>
-                    <p class="slide-description" data-translate="childrenSlideText">Her çocuk, güvenli bir ortamda büyüme, eğitim alma ve sevgiyle büyütülme hakkına sahiptir. Çocuk hakları, insanlığın geleceğine yapılan en önemli yatırımdır.</p>
+                    <h2 class="slide-title">Çocuklar Geleceğimizdir</h2>
+                    <p class="slide-description">Her çocuk, güvenli bir ortamda büyüme, eğitim alma ve sevgiyle büyütülme hakkına sahiptir. Çocuk hakları, insanlığın geleceğine yapılan en önemli yatırımdır.</p>
                 </div>
             </div>
 
@@ -88,79 +89,79 @@
         </section>
 
         <section class="rights-section" id="rights">
-            <h2 data-translate="rightsTitle">Temel İnsan Hakları</h2>
+            <h2>Temel İnsan Hakları</h2>
             <div class="rights-grid">
                 <a href="pages/equality-rights.html" class="right-card">
-                    <img src="assets/images/equality.jpg" alt="Eşitlik Hakkı" data-translate="equalityImageAlt">
+                    <img src="assets/images/equality.jpg" alt="Eşitlik Hakkı">
                     <div class="right-card-content">
-                        <h3 data-translate="equalityTitle">Eşitlik Hakkı</h3>
-                        <p data-translate="equalityText">Her insan, ırk, renk, cinsiyet, dil, din, siyasi veya diğer görüş ayrımı gözetilmeksizin eşit haklara sahiptir.</p>
+                        <h3>Eşitlik</h3>
+                        <p>Herkes kanun önünde eşittir ve ayrım gözetilmeksizin kanunun eşit korumasından yararlanma hakkına sahiptir.</p>
                     </div>
                 </a>
                 <a href="pages/women-rights.html" class="right-card">
-                    <img src="assets/images/women.jpg" alt="Kadın Hakları" data-translate="womenRightsImageAlt">
+                    <img src="assets/images/women.jpg" alt="Kadın Hakları">
                     <div class="right-card-content">
-                        <h3 data-translate="womenRightsTitle">Kadın Hakları</h3>
-                        <p data-translate="womenRightsText">Kadınların ekonomik, sosyal, kültürel ve siyasi hayatta erkeklerle eşit haklara sahip olması temel bir insan hakkıdır.</p>
+                        <h3>Kadın Hakları</h3>
+                        <p>Kadınların ekonomik, sosyal, kültürel ve siyasi hayatta erkeklerle eşit haklara sahip olması temel bir insan hakkıdır.</p>
                     </div>
                 </a>
                 <a href="pages/children-rights.html" class="right-card">
-                    <img src="assets/images/children.jpg" alt="Çocuk Hakları" data-translate="childrenRightsImageAlt">
+                    <img src="assets/images/children.jpg" alt="Çocuk Hakları">
                     <div class="right-card-content">
-                        <h3 data-translate="childrenRightsTitle">Çocuk Hakları</h3>
-                        <p data-translate="childrenRightsText">Her çocuk, sağlıklı bir ortamda büyüme, eğitim alma ve şiddetten korunma hakkına sahiptir.</p>
+                        <h3>Çocuk Hakları</h3>
+                        <p>Her çocuk, sağlıklı bir ortamda büyüme, eğitim alma ve şiddetten korunma hakkına sahiptir.</p>
                     </div>
                 </a>
                 <a href="pages/education-rights.html" class="right-card">
-                    <img src="assets/images/education.jpg" alt="Eğitim Hakkı" data-translate="educationImageAlt">
+                    <img src="assets/images/education.jpg" alt="Eğitim Hakkı">
                     <div class="right-card-content">
-                        <h3 data-translate="educationTitle">Eğitim Hakkı</h3>
-                        <p data-translate="educationText">Herkes eğitim hakkına sahiptir. Eğitim, en azından ilk ve temel eğitim aşamasında ücretsiz olmalıdır.</p>
+                        <h3>Eğitim Hakkı</h3>
+                        <p>Herkes eğitim hakkına sahiptir. Eğitim, en azından ilk ve temel eğitim aşamasında ücretsiz olmalıdır.</p>
                     </div>
                 </a>
                 <a href="pages/housing-rights.html" class="right-card">
-                    <img src="assets/images/housing.jpg" alt="Barınma Hakkı" data-translate="housingImageAlt">
+                    <img src="assets/images/housing.jpg" alt="Barınma Hakkı">
                     <div class="right-card-content">
-                        <h3 data-translate="housingTitle">Barınma Hakkı</h3>
-                        <p data-translate="housingText">Her insan, kendisi ve ailesi için yeterli yaşam standardına sahip olma hakkına sahiptir, bu barınma hakkını da içerir.</p>
+                        <h3>Barınma Hakkı</h3>
+                        <p>Her insan, kendisi ve ailesi için yeterli yaşam standardına sahip olma hakkına sahiptir, bu barınma hakkını da içerir.</p>
                     </div>
                 </a>
                 <a href="pages/health-rights.html" class="right-card">
-                    <img src="assets/images/health.jpg" alt="Sağlık Hakkı" data-translate="healthImageAlt">
+                    <img src="assets/images/health.jpg" alt="Sağlık Hakkı">
                     <div class="right-card-content">
-                        <h3 data-translate="healthTitle">Sağlık Hakkı</h3>
-                        <p data-translate="healthText">Herkes, mümkün olan en yüksek sağlık standardına ulaşma hakkına sahiptir ve sağlık hizmetlerine erişebilmelidir.</p>
+                        <h3>Sağlık Hakkı</h3>
+                        <p>Herkes, mümkün olan en yüksek sağlık standardına ulaşma hakkına sahiptir ve sağlık hizmetlerine erişebilmelidir.</p>
                     </div>
                 </a>
             </div>
         </section>
 
         <section id="about" class="about-section">
-            <h2 data-translate="aboutTitle">Hakkımızda</h2>
+            <h2>Hakkımızda</h2>
             <div class="about-content">
-                <p data-translate="aboutText">Dünya çapında eğitim, savunuculuk ve eylem yoluyla insan haklarını korumak ve geliştirmek için çalışıyoruz.</p>
+                <p>Dünya çapında eğitim, savunuculuk ve eylem yoluyla insan haklarını korumak ve geliştirmek için çalışıyoruz.</p>
                 <div class="values-grid">
                     <div class="value-card">
                         <i class="fas fa-dove"></i>
-                        <h3 data-translate="war">Savaş</h3>
-                        <p data-translate="warText">Savaşa dur de! Her can değerlidir, barış tek hedefimizdir</p>
+                        <h3>Savaş</h3>
+                        <p>Savaşa dur de! Her can değerlidir, barış tek hedefimizdir</p>
                     </div>
                     <div class="value-card">
                         <i class="fas fa-female"></i>
-                        <h3 data-translate="women">Kadın Hakları</h3>
-                        <p data-translate="womenText">Daha güçlü ve eşit bir toplum için kadınları güçlendiriyoruz</p>
+                        <h3>Kadın Hakları</h3>
+                        <p>Daha güçlü ve eşit bir toplum için kadınları güçlendiriyoruz</p>
                     </div>
                     <div class="value-card">
                         <i class="fas fa-child"></i>
-                        <h3 data-translate="children">Çocuk Hakları</h3>
-                        <p data-translate="childrenText">Geleceğimizi koruyoruz: Her çocuk eğitim ve güvenlik hakkına sahiptir</p>
+                        <h3>Çocuk Hakları</h3>
+                        <p>Geleceğimizi koruyoruz: Her çocuk eğitim ve güvenlik hakkına sahiptir</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="articles" class="articles-section">
-            <h2 data-translate="articlesTitle">Son Makaleler</h2>
+            <h2>Son Makaleler</h2>
             <div class="articles-grid">
                 <article class="article-card">
                     <div class="article-content">
@@ -209,36 +210,36 @@
         </section>
 
         <section id="events" class="events-section">
-            <h2 data-translate="eventsTitle">Yaklaşan Etkinlikler</h2>
+            <h2>Yaklaşan Etkinlikler</h2>
             <div class="events-grid">
                
             </div>
         </section>
 
         <section id="get-involved" class="get-involved-section">
-            <h2 data-translate="getInvolvedTitle">Katılın</h2>
+            <h2>Katılın</h2>
             <div class="involvement-options">
                 <div class="option-card">
                     <i class="fas fa-hand-holding-heart"></i>
-                    <h3 data-translate="volunteer">Gönüllü Olun</h3>
-                    <p data-translate="volunteerText">Gönüllü topluluğumuza katılın</p>
+                    <h3>Gönüllü Olun</h3>
+                    <p>Gönüllü topluluğumuza katılın</p>
                     <a href="pages/contact.html">
-                        <button class="secondary-button" data-translate="learnMore">Daha Fazla Bilgi</button>
+                        <button class="secondary-button">Daha Fazla Bilgi</button>
                     </a>
                 </div>
                 <div class="option-card">
                     <i class="fas fa-donate"></i>
-                    <h3 data-translate="donate">Bağış Yap</h3>
-                    <p data-translate="donateText">Bağışlarınızla destek olun</p>
+                    <h3>Bağış Yap</h3>
+                    <p>Bağışlarınızla destek olun</p>
                     <a href="pages/bagis.html">
-                        <button class="secondary-button" data-translate="learnMore">Daha Fazla Bilgi</button>
+                        <button class="secondary-button">Daha Fazla Bilgi</button>
                     </a>
                 </div>
                 <div class="option-card">
                     <i class="fas fa-pen-fancy"></i>
-                    <h3 data-translate="petitions">İmza Kampanyalarına Katılın</h3>
-                    <p data-translate="petitionsText">Sesinizi duyurun</p>
-                    <button class="secondary-button" data-translate="viewPetitions">İmza Kampanyalarını Görüntüleyin</button>
+                    <h3>İmza Kampanyalarına Katılın</h3>
+                    <p>Sesinizi duyurun</p>
+                    <button class="secondary-button">İmza Kampanyalarını Görüntüleyin</button>
                 </div>
             </div>
         </section>
@@ -246,13 +247,13 @@
         <section id="index-contact" class="index-contact-section">
             <div class="index-contact-container">
                 <div class="index-contact-info">
-                    <h2 data-translate="contactTitle">İletişime Geçin</h2>
-                    <p data-translate="contactDescription">Bizimle iletişime geçmek için iletişim sayfamızı ziyaret edin veya aşağıdaki kanallardan bize ulaşın.</p>
+                    <h2>İletişime Geçin</h2>
+                    <p>Bizimle iletişime geçmek için iletişim sayfamızı ziyaret edin veya aşağıdaki kanallardan bize ulaşın.</p>
                     
                     <div class="info-items-container">
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p data-translate="address">İstanbul, Türkiye</p>
+                            <p>İstanbul, Türkiye</p>
                         </div>
                         <div class="info-item">
                             <i class="fas fa-phone"></i>
@@ -270,7 +271,7 @@
                         <a href="#" class="index-social-link"><i class="fab fa-instagram"></i></a>
                         <a href="#" class="index-social-link"><i class="fab fa-linkedin"></i></a>
                     </div>
-                    <a href="pages/contact.html" class="submit-btn" data-translate="contactUsButton">Bize Ulaşın</a>
+                    <a href="pages/contact.html" class="submit-btn">Bize Ulaşın</a>
                 </div>
                 <div class="index-contact-map">
                 </div>
